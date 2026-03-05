@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="dashboard-header">
+    <h1>Welcome, {{ user.username }}!</h1>
+    <p>Manage your appointments and track slot status.</p>
+</div>
+
+<div class="stats-grid">
+    <div class="glass-card stat-card total">
+        <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+        <div class="stat-info">
+            <h3>Total Slots</h3>
+            <p class="stat-value">{{ total_slots }}</p>
+        </div>
+    </div>
+    <div class="glass-card stat-card available">
+        <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="stat-info">
+            <h3>Available</h3>
+            <p class="stat-value">{{ available_slots }}</p>
+        </div>
+    </div>
+    <div class="glass-card stat-card booked">
+        <div class="stat-icon"><i class="fas fa-times-circle"></i></div>
+        <div class="stat-info">
+            <h3>Booked</h3>
+            <p class="stat-value">{{ booked_slots }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="action-section">
+    <div class="glass-card welcome-card">
+        <h3>Ready to book?</h3>
+        <p>Browse through available time slots and reserve yours instantly.</p>
+        <a href="{% url 'slots' %}" class="btn btn-primary btn-lg">View Available Slots</a>
+    </div>
+</div>
+{% endblock %}

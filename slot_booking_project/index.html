@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Booker - Static Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --text-main: #1f2937;
+        }
+        body {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            color: var(--text-main);
+        }
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 2rem;
+            padding: 3rem;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 1rem; }
+        p { line-height: 1.6; margin-bottom: 2rem; }
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+        .footer { margin-top: 2rem; font-size: 0.8rem; color: #6b7280; }
+    </style>
+</head>
+<body>
+    <div class="glass-card">
+        <span class="badge">Netlify Deployment Notice</span>
+        <h1><i class="fas fa-calendar-check"></i> Slot Booker App</h1>
+        <p>
+            You are viewing the <strong>Static Preview</strong> of the Slot Booking application. 
+            Because Netlify only supports static files, the <strong>Django Backend</strong> and <strong>MySQL Database</strong> cannot run here.
+        </p>
+        <p>
+            To use the full features (Login, Register, and Real-time Booking), please run this project <strong>locally</strong> using Python or deploy it to a backend host like <strong>PythonAnywhere</strong> or <strong>Render</strong>.
+        </p>
+        <a href="https://github.com/your-username/your-repo" class="btn">View Source Code</a>
+        <div class="footer">
+            Built with Django, MySQL, and Glassmorphism UI
+        </div>
+    </div>
+</body>
+</html>

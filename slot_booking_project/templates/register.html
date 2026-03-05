@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="login-container">
+    <div class="glass-card login-card">
+        <h2><i class="fas fa-user-plus"></i> Create Account</h2>
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {% if field.help_text %}
+                    <small class="helper-text">{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                    <p class="error-text" style="color: var(--danger); font-size: 0.8rem;">{{ error }}</p>
+                {% endfor %}
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-user-check"></i> Register
+            </button>
+        </form>
+        <p class="helper-text">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+    </div>
+</div>
+{% endblock %}
