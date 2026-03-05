@@ -1,0 +1,10 @@
+[build]
+  # Tell Netlify to serve the root directory where your index.html is located
+  publish = "."
+
+[[redirects]]
+  # This rule ensures that if a user visits /login or /register,
+  # they are redirected to the landing page instead of seeing a 404 error.
+  from = "/*"
+  to = "/index.html"
+  status = 200
